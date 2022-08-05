@@ -36,8 +36,8 @@ function Features() {
   const npmCommand = `npm install vouchdao`
 
   const setupCommand = `
-    import { isVouched } from 'vouchdao'
-    await isVouched("addr")  
+  import { isVouched } from 'vouchdao'
+  await isVouched("addr")  
   `
 
   useEffect(() => {
@@ -84,7 +84,7 @@ function Features() {
                       <pre className="rounded-md flex"><code lang='javascript' className="bg-[#eee] p-[1rem]">{npmCommand}</code><a className="pt-4 pl-2" href="#"><Copy color="#444" onClick={() => handleCopy()} /></a></pre>
                     </div>
                     <div className="max-w-sm mx-auto pt-8" data-aos="zoom-y-out" data-aos-delay="300">
-                      <pre className="rounded-md flex text-sm"><code lang='javascript' style={{ backgroundColor: '#eee' }}>{setupCommand}</code></pre>
+                      <pre className="rounded-md text-sm"><code lang='javascript' className="bg-[#eee]">{setupCommand}</code></pre>
                     </div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
@@ -100,7 +100,7 @@ function Features() {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 }
 

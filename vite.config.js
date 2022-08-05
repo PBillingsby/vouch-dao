@@ -10,7 +10,6 @@ export default defineConfig({
     postcss,
   },
   plugins: [react()],
-  base: '',
   resolve: {
     alias: [
       {
