@@ -22,3 +22,14 @@
 [x-cloak=""] {
     display: none;
 }
+
+pre {
+    background-color: #eee;
+    overflow: auto;
+    font-family: 'Monaco', monospace;
+    padding: 0 1em;
+  }
+
+body {
+    font-family: monospace !important;
+}

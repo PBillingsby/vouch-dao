@@ -1,35 +1,19 @@
 import React from 'react';
-
-import Header from '../partials/Header';
 import HeroHome from '../partials/HeroHome';
 import FeaturesHome from '../partials/Features';
-import FeaturesBlocks from '../partials/FeaturesBlocks';
-import Testimonials from '../partials/Testimonials';
-import Newsletter from '../partials/Newsletter';
+import VouchImage from '../images/vouch-dao.png';
+
 import Footer from '../partials/Footer';
 
 function Home() {
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
-
-      {/*  Site header */}
-      <Header />
-
-      {/*  Page content */}
       <main className="flex-grow">
-
-        {/*  Page sections */}
+        <img className="mx-auto" data-aos="zoom-y-out" data-aos-delay="75" style={{ width: '25rem' }} src={VouchImage} width="768" height="432" alt="Hero" />
         <HeroHome />
         <FeaturesHome />
-        <FeaturesBlocks />
-        <Testimonials />
-        <Newsletter />
-
       </main>
-
-      {/*  Site footer */}
       <Footer />
-
     </div>
   );
 }
