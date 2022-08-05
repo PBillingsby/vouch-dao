@@ -2,7 +2,23 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Gavel, ShieldLock } from 'tabler-icons-react';
 
 function Features() {
+  // const [community, setCommunity] = useState()
+  // const arweave = Arweave.init({
+  //   host: "arweave.net",
+  //   port: 443,
+  //   protocol: "https",
+  // });
 
+  // const getCommunity = async () => {
+  //   const newComm = new Community(arweave);
+  //   newComm.setCommunityTx("gb6J0Kf9o07oUgG_2rKgDeFu8zlF81c3D1VbTrdfUDU")
+  //   const community = await newComm.getState();
+  //   setCommunity(community)
+  // }
+
+  // if (!community) {
+  //   getCommunity()
+  // }
   const [tab, setTab] = useState(1);
 
   const tabs = useRef(null);
