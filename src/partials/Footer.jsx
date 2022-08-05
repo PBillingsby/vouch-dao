@@ -6,10 +6,10 @@ function Footer() {
       <div className="flex pb-4">
         <ul className="text-sm flex flex-row gap-12 mx-auto">
           <li className="mb-2">
-            <a href="https://community.xyz/#gb6J0Kf9o07oUgG_2rKgDeFu8zlF81c3D1VbTrdfUDU">Community</a>
+            <a href="https://community.xyz/#ZGaL5DOMIYRw9YHZ_NZ2JoIjST1QwhiD6T1jePH381I" target="_blank">Community</a>
           </li>
           <li className="mb-2">
-            <a href="">Contract</a>
+            <a href="https://viewblock.io/arweave/address/ZGaL5DOMIYRw9YHZ_NZ2JoIjST1QwhiD6T1jePH381I" target="_blank">Contract</a>
           </li>
         </ul>
       </div>
