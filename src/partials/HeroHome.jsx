@@ -7,7 +7,7 @@ function HeroHome() {
     navigator.clipboard.writeText(npmCommand);
   }
 
-  const npmCommand = `npm install vouch-dao`
+  const npmCommand = `npm install placeholder`
   return (
     <section className="relative">
       <div className="mb-16 mx-auto px- sm:px-6">
@@ -18,7 +18,7 @@ function HeroHome() {
               <p className="text-lg text-gray-600 bg-clip-text" data-aos="zoom-y-out" data-aos-delay="150">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisi lectus, blandit ac imperdiet gravida, lacinia non elit. Integer nec posuere arcu.</p>
               <p className="text-lg text-gray-600 bg-clip-text" data-aos="zoom-y-out" data-aos-delay="150">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisi lectus, blandit ac imperdiet gravida, lacinia non elit. Integer nec posuere arcu.</p>
               <div className="max-w-xs mx-auto pt-8" data-aos="zoom-y-out" data-aos-delay="300">
-                <pre className="rounded-md flex"><code lang='javascript' style={{ backgroundColor: '#eee', padding: '1rem' }}>{npmCommand}</code><a className="pt-4 pl-6" href="#"><Copy color="#444" onClick={() => handleCopy()} /></a></pre>
+                <pre className="rounded-md flex"><code lang='javascript' style={{ backgroundColor: '#eee', padding: '1rem' }}>{npmCommand}</code><a className="pt-4 pl-2" href="#"><Copy color="#444" onClick={() => handleCopy()} /></a></pre>
               </div>
             </div>
           </div>

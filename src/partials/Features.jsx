@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Affiliate, ShieldLock } from 'tabler-icons-react';
+import { Gavel, ShieldLock } from 'tabler-icons-react';
 
 function Features() {
 
@@ -37,11 +37,11 @@ function Features() {
                   href="#0"
                 >
                   <div>
-                    <div className="font-bold leading-snug tracking-tight mb-1">Decentralized verification of Arweave wallets</div>
+                    <div className="font-bold leading-snug tracking-tight mb-1">Placeholder Text</div>
                     <div className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisi lectus, blandit ac imperdiet gravida, lacinia non elit. Integer nec posuere arcu.</div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
-                    <ShieldLock
+                    <Gavel
                       size={26}
                       strokeWidth={2}
                       color={'black'}
@@ -53,11 +53,11 @@ function Features() {
                   href="#0"
                 >
                   <div>
-                    <div className="font-bold leading-snug tracking-tight mb-1">Minimize bad actors</div>
+                    <div className="font-bold leading-snug tracking-tight mb-1">Placeholder Text</div>
                     <div className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisi lectus, blandit ac imperdiet gravida, lacinia non elit. Integer nec posuere arcu.</div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
-                    <Affiliate
+                    <ShieldLock
                       size={26}
                       strokeWidth={2}
                       color={'black'}
