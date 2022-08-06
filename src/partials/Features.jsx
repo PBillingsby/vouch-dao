@@ -64,7 +64,7 @@ function Features() {
                 >
                   <div>
                     <div className="font-bold leading-snug tracking-tight mb-1">For users</div>
-                    <div className="text-gray-600"><a href="https://www.twitter.com/vouchdao" target="_blank" style={{ color: '#6495ED' }}>Get vouched</a> with the first trusted node today.</div>
+                    <div className="text-gray-600"><a href="https://vouch-v0.hyper.io" target="_blank" style={{ color: '#6495ED' }}>Get vouched</a> with the first trusted node today.</div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
                     <ShieldLock
