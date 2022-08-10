@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Tool, ShieldLock, Copy } from 'tabler-icons-react';
+import { Tool, ShieldLock, Copy, ArrowUpCircle } from 'tabler-icons-react';
+import VouchFlow from '../images/vouch-flow.png';
 
-function Features() {
-  // const [community, setCommunity] = useState()
+function Features({ offset }) {
   // const arweave = Arweave.init({
   //   host: "arweave.net",
   //   port: 443,
@@ -19,15 +19,6 @@ function Features() {
   // if (!community) {
   //   getCommunity()
   // }
-  const [tab, setTab] = useState(1);
-
-  const tabs = useRef(null);
-
-  const heightFix = () => {
-    if (tabs.current.children[tab]) {
-      tabs.current.style.height = tabs.current.children[tab - 1].offsetHeight + 'px'
-    }
-  }
 
   const handleCopy = () => {
     navigator.clipboard.writeText(npmCommand);
@@ -40,27 +31,16 @@ function Features() {
   await isVouched("addr")  
   `
 
-  useEffect(() => {
-    heightFix()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [tab])
-
   return (
-    <section className="relative">
+    <section className="relative" id="features">
       <div className="absolute inset-0 bg-gray-100 pointer-events-none content-center" aria-hidden="true"></div>
       <div className="relative max-w-6xl mx-auto p-4 sm:px-6">
         <div>
-          <div className="flex p-4">
-            <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 md:mt-6" data-aos="fade-right">
-              <div className="md:pr-4 pt-20 lg:pr-12 xl:pr-16 mb-8">
-                <p className="h2 mb-3">VouchDAO</p>
-                <p className="text-xl text-gray-600">The blue tick for the Permaweb.</p>
-              </div>
-            </div>
-            <div className="pt-6 mx-auto max-w-lg md:max-w-none md:w-full mx-auto min-h-[70vh] mb-8 md:mb-0 md:order-1" data-aos="zoom-y-out" ref={tabs}>
-              <div className="md:mb-0 mt-16">
+          <div className="flex">
+            <div className="md:col-span-7 lg:col-span-6" data-aos="fade-right">
+              <div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
                 <div
-                  className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3`}
+                  className={`flex items-center text-lg p-9 rounded border-2 transition duration-300 ease-in-out mb-3`}
                 >
                   <div>
                     <div className="font-bold leading-snug tracking-tight mb-1">For users</div>
@@ -75,7 +55,7 @@ function Features() {
                   </div>
                 </div>
                 <div
-                  className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3`}
+                  className={`flex items-center text-lg p-5 rounded-md border-2 transition duration-300 ease-in-out mb-3`}
                 >
                   <div>
                     <div className="font-bold leading-snug tracking-tight mb-1">For developers</div>
@@ -97,7 +77,26 @@ function Features() {
                 </div>
               </div>
             </div>
+            <div className="mx-auto mb-8 md:mb-0 md:order-1" data-aos="zoom-y-out fade-left" >
+              <div className="md:mb-0 border border-gray-300 border-2 rounded-md p-1">
+                <img className="object-cover" src={VouchFlow} />
+              </div>
+            </div>
           </div>
+        </div>
+        <div className="mt-2 pb-6 transition duration-300 ease-in-out" data-aos="zoom-y-in" data-aos-delay="150">
+          {offset > 100 && <a href="#">
+            <ArrowUpCircle
+              size={48}
+              strokeWidth={2}
+              color={'#94a3b8'}
+              className="mx-auto"
+              onClick={() => {
+                window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+              }}
+            />
+          </a>
+          }
         </div>
       </div>
     </section >
