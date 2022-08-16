@@ -3,6 +3,7 @@ import postcss from './postcss.config.js'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
+  base: '',
   define: {
     'process.env': process.env
   },
