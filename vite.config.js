@@ -1,16 +1,18 @@
 import { defineConfig } from 'vite'
-import postcss from './postcss.config.js'
 import react from '@vitejs/plugin-react'
+import autoprefixer from 'autoprefixer'
+import tailwind from 'tailwindcss'
+import tailwindConfig from './tailwind.config.js'
 
+// https://vitejs.dev/config/
 export default defineConfig({
   base: '',
-  define: {
-    'process.env': process.env
-  },
-  css: {
-    postcss,
-  },
   plugins: [react()],
+  css: {
+    postcss: {
+      plugins: [tailwind(tailwindConfig), autoprefixer],
+    }
+  },
   resolve: {
     alias: [
       {

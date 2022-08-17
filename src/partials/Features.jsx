@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Tool, ShieldLock, Copy, ArrowUpCircle } from 'tabler-icons-react';
+import { Tool, ShieldLock, Copy, ArrowUpCircle, Check } from 'tabler-icons-react';
 import VouchFlow from '../images/vouch-flow.png';
 
 function Features({ offset }) {
@@ -34,53 +34,67 @@ function Features({ offset }) {
   return (
     <section className="relative" id="features">
       <div className="absolute inset-0 bg-gray-100 pointer-events-none content-center" aria-hidden="true"></div>
-      <div className="relative max-w-6xl mx-auto p-4 sm:px-6">
-        <div>
-          <div className="flex">
-            <div className="md:col-span-7 lg:col-span-6" data-aos="fade-right">
-              <div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
-                <div
-                  className={`flex items-center text-lg p-9 rounded border-2 transition duration-300 ease-in-out mb-3`}
-                >
-                  <div>
-                    <div className="font-bold leading-snug tracking-tight mb-1">For users</div>
-                    <div className="text-gray-600"><a href="https://vouch-v0.hyper.io" target="_blank" style={{ color: '#6495ED' }}>Get vouched</a> with the first trusted node today.</div>
+      <div className="relative mx-auto p-4 sm:px-6">
+        <div className="flex justify-between mx-auto">
+          <div data-aos="fade-right">
+            <div className="mb-8 max-w-[45vw]">
+              {/* <div
+                className={`flex py-6 items-center text-lg p-9 rounded border-2 transition duration-300 ease-in-out mb-3`}
+              >
+                <div>
+                  <div className="font-bold text-3xl leading-snug tracking-tight mb-1">VouchDAO</div>
+                  <div className="text-gray-600 text-xl inline-flex gap-2">The<p className="text-[#6495ED]">blue tick</p> for the Permaweb.</div>
+                </div>
+                <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
+                  <Check
+                    size={26}
+                    strokeWidth={2}
+                    color={'#6495ED'}
+                  />
+                </div>
+              </div> */}
+              <div
+                className={`flex py-6 items-center text-lg p-9 rounded border-2 transition duration-300 ease-in-out mb-3`}
+              >
+                <div>
+                  <div className="font-bold text-3xl leading-snug tracking-tight mb-1">For users</div>
+                  <div className="text-gray-600 pt-4">Verify using Vouch Twitter Service, the first trusted node today.</div>
+                  <div className="text-gray-600 py-4"><a href="https://vouch-v0.hyper.io" target="_blank" style={{ color: '#6495ED' }}>Get vouched</a> with the only blue tick on the Permaweb!</div>
+                </div>
+                <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
+                  <ShieldLock
+                    size={26}
+                    strokeWidth={2}
+                    color={'black'}
+                  />
+                </div>
+              </div>
+              <div
+                className={` flex items-center py-6 text-lg p-5 rounded-md border-2 transition duration-300 ease-in-out mb-3`}
+              >
+                <div>
+                  <div className="font-bold text-3xl leading-snug tracking-tight mb-1">For developers</div>
+                  <div className="text-gray-600 py-4">Integrating VouchDAO takes 2 minutes and all of pain out of bots on the web.</div>
+                  <div className="max-w-sm mx-auto pt-4" data-aos="zoom-y-out" data-aos-delay="300">
+                    <pre className="rounded-md flex"><code lang='javascript' className="bg-[#eee] p-[1rem]">{npmCommand}</code><button className="pl-2" onClick={() => false}><Copy color="#444" onClick={() => handleCopy()} /></button></pre>
                   </div>
-                  <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
-                    <ShieldLock
-                      size={26}
-                      strokeWidth={2}
-                      color={'black'}
-                    />
+                  <div className="max-w-sm mx-auto py-4" data-aos="zoom-y-out" data-aos-delay="300">
+                    <pre className="rounded-md text-sm"><code lang='javascript' className="bg-[#eee]">{setupCommand}</code></pre>
                   </div>
                 </div>
-                <div
-                  className={`flex items-center text-lg p-5 rounded-md border-2 transition duration-300 ease-in-out mb-3`}
-                >
-                  <div>
-                    <div className="font-bold leading-snug tracking-tight mb-1">For developers</div>
-                    <div className="text-gray-600">Integrating VouchDAO takes 2 minutes and all of pain out of bots on the web.</div>
-                    <div className="max-w-sm mx-auto pt-8" data-aos="zoom-y-out" data-aos-delay="300">
-                      <pre className="rounded-md flex"><code lang='javascript' className="bg-[#eee] p-[1rem]">{npmCommand}</code><a className="pt-4 pl-2" href="#"><Copy color="#444" onClick={() => handleCopy()} /></a></pre>
-                    </div>
-                    <div className="max-w-sm mx-auto pt-8" data-aos="zoom-y-out" data-aos-delay="300">
-                      <pre className="rounded-md text-sm"><code lang='javascript' className="bg-[#eee]">{setupCommand}</code></pre>
-                    </div>
-                  </div>
-                  <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
-                    <Tool
-                      size={26}
-                      strokeWidth={2}
-                      color={'black'}
-                    />
-                  </div>
+                <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
+                  <Tool
+                    size={26}
+                    strokeWidth={2}
+                    color={'black'}
+                  />
                 </div>
               </div>
             </div>
-            <div className="mx-auto mb-8 md:mb-0 md:order-1" data-aos="zoom-y-out fade-left" >
-              <div className="md:mb-0 border border-gray-300 border-2 rounded-md p-1">
-                <img className="object-cover" src={VouchFlow} />
-              </div>
+          </div>
+          <div className="max-w-[45vw]">
+            <div className="mx-auto md:mb-0 border border-gray-300 border-2 rounded-md p-1" data-aos="zoom-y-out fade-left" >
+              <img src={VouchFlow} />
             </div>
           </div>
         </div>
