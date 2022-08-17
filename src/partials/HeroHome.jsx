@@ -9,7 +9,7 @@ function HeroHome() {
   )
 
   return (
-    <section className="relative">
+    <section className="relative p-4">
       <div className="mb-16 mx-auto px- sm:px-6">
         <div className="pb-2">
           <div className="text-center">

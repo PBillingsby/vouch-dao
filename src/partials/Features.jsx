@@ -35,24 +35,9 @@ function Features({ offset }) {
     <section className="relative" id="features">
       <div className="absolute inset-0 bg-gray-100 pointer-events-none content-center" aria-hidden="true"></div>
       <div className="relative mx-auto p-4 sm:px-6">
-        <div className="flex justify-between mx-auto">
+        <div className="sm:block md:block lg:flex justify-between mx-auto">
           <div data-aos="fade-right">
-            <div className="mb-8 max-w-[45vw]">
-              {/* <div
-                className={`flex py-6 items-center text-lg p-9 rounded border-2 transition duration-300 ease-in-out mb-3`}
-              >
-                <div>
-                  <div className="font-bold text-3xl leading-snug tracking-tight mb-1">VouchDAO</div>
-                  <div className="text-gray-600 text-xl inline-flex gap-2">The<p className="text-[#6495ED]">blue tick</p> for the Permaweb.</div>
-                </div>
-                <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
-                  <Check
-                    size={26}
-                    strokeWidth={2}
-                    color={'#6495ED'}
-                  />
-                </div>
-              </div> */}
+            <div className="mb-8 lg:max-w-[45vw]">
               <div
                 className={`flex py-6 items-center text-lg p-9 rounded border-2 transition duration-300 ease-in-out mb-3`}
               >
@@ -76,7 +61,7 @@ function Features({ offset }) {
                   <div className="font-bold text-3xl leading-snug tracking-tight mb-1">For developers</div>
                   <div className="text-gray-600 py-4">Integrating VouchDAO takes 2 minutes and all of pain out of bots on the web.</div>
                   <div className="max-w-sm mx-auto pt-4" data-aos="zoom-y-out" data-aos-delay="300">
-                    <pre className="rounded-md flex"><code lang='javascript' className="bg-[#eee] p-[1rem]">{npmCommand}</code><button className="pl-2" onClick={() => false}><Copy color="#444" onClick={() => handleCopy()} /></button></pre>
+                    <pre className="rounded-md max-w-xs flex"><code lang='javascript' className="bg-[#eee] p-[1rem]">{npmCommand}</code><button className="pl-2" onClick={() => false}><Copy color="#444" onClick={() => handleCopy()} /></button></pre>
                   </div>
                   <div className="max-w-sm mx-auto py-4" data-aos="zoom-y-out" data-aos-delay="300">
                     <pre className="rounded-md text-sm"><code lang='javascript' className="bg-[#eee]">{setupCommand}</code></pre>
@@ -92,7 +77,7 @@ function Features({ offset }) {
               </div>
             </div>
           </div>
-          <div className="max-w-[45vw]">
+          <div className="lg:max-w-[45vw]">
             <div className="mx-auto md:mb-0 border border-gray-300 border-2 rounded-md p-1" data-aos="zoom-y-out fade-left" >
               <img src={VouchFlow} />
             </div>
