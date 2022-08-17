@@ -1,6 +1,5 @@
 import React from 'react';
 import HeroHome from '../partials/HeroHome';
-import FeaturesHome from '../partials/Features';
 import VouchImage from '../images/vouch-dao.png';
 
 import Footer from '../partials/Footer';
@@ -11,7 +10,6 @@ function Home() {
       <main className="flex-grow">
         <img className="mx-auto" data-aos="zoom-y-out" data-aos-delay="75" style={{ width: '25rem' }} src={VouchImage} width="768" height="432" alt="Hero" />
         <HeroHome />
-        <FeaturesHome />
       </main>
       <Footer />
     </div>
