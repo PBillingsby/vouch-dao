@@ -27,10 +27,9 @@ function Features({ offset }) {
   const npmCommand = `npm install vouchdao`
 
   const setupCommand = `
-  import { isVouched, isVouchedBy } from 'vouchdao'
+  import { isVouched } from 'vouchdao'
 
-  await isVouched("addr")
-  await isVouchedBy("addr", "service")  
+  await isVouched("addr") 
   `
 
   return (
