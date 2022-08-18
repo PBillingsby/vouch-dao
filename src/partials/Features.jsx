@@ -27,8 +27,10 @@ function Features({ offset }) {
   const npmCommand = `npm install vouchdao`
 
   const setupCommand = `
-  import { isVouched } from 'vouchdao'
-  await isVouched("addr")  
+  import { isVouched, isVouchedBy } from 'vouchdao'
+
+  await isVouched("addr")
+  await isVouchedBy("addr", "service")  
   `
 
   return (
@@ -61,10 +63,10 @@ function Features({ offset }) {
                   <div className="font-bold text-3xl leading-snug tracking-tight mb-1">For developers</div>
                   <div className="text-gray-600 py-4">Integrating VouchDAO takes 2 minutes and all of pain out of bots on the web.</div>
                   <div className="max-w-sm mx-auto pt-4" data-aos="zoom-y-out" data-aos-delay="300">
-                    <pre className="rounded-md flex"><code lang='javascript' className="bg-[#eee] p-[1rem]">{npmCommand}</code><button className="pl-2" onClick={() => false}><Copy color="#444" onClick={() => handleCopy()} /></button></pre>
+                    <pre className="rounded-md flex"><code lang='javascript' className="bg-[#eee] p-[1rem] text-sm">{npmCommand}</code><button className="pl-2" onClick={() => false}><Copy color="#444" onClick={() => handleCopy()} /></button></pre>
                   </div>
                   <div className="max-w-sm mx-auto py-4" data-aos="zoom-y-out" data-aos-delay="300">
-                    <pre className="rounded-md text-sm"><code lang='javascript' className="bg-[#eee]">{setupCommand}</code></pre>
+                    <pre className="rounded-md text-xs"><code lang='javascript' className="bg-[#eee]">{setupCommand}</code></pre>
                   </div>
                 </div>
                 <div className="hidden md:flex lg:flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
