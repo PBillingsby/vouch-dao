@@ -35,7 +35,7 @@ function Features({ offset }) {
     <section className="relative" id="features">
       <div className="absolute inset-0 bg-gray-100 pointer-events-none content-center" aria-hidden="true"></div>
       <div className="relative mx-auto p-4 sm:px-6">
-        <div className="sm:block md:block lg:flex justify-between mx-auto">
+        <div className="max-w-[1480px] sm:block md:block lg:flex justify-between mx-auto">
           <div data-aos="fade-right">
             <div className="mb-8 lg:max-w-[45vw]">
               <div
