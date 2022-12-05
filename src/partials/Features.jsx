@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Tool, ShieldLock, Copy, ArrowUpCircle, CircleCheck, CircleX } from 'tabler-icons-react';
 import VouchFlow from '../images/vouch-flow.png';
-import { WarpFactory } from 'warp-contracts';
 import { isVouched } from "vouchdao"
 let contractState;
 
