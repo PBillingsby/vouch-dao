@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Tool, ShieldLock, Copy, ArrowUpCircle, CircleCheck, CircleX } from 'tabler-icons-react';
 import VouchFlow from '../images/vouch-flow.png';
-import { WarpFactory } from 'warp-contracts/web';
+import { WarpFactory } from 'warp-contracts';
 import { isVouched } from "vouchdao"
-const warp = WarpFactory.forMainnet();
 let contractState;
 
 function Features({ offset }) {
@@ -12,10 +11,6 @@ function Features({ offset }) {
   }, [contractState])
 
   const getContract = async () => {
-    const contract = warp.contract("_z0ch80z_daDUFqC9jHjfOL8nekJcok4ZRkE_UesYsk").connect('use_wallet');
-    const { cachedValue } = await contract.readState();
-    console.log(cachedValue)
-    contractState = cachedValue;
   }
   const [vouched, setVouched] = useState("");
   const [searched, setSearched] = useState(false)
@@ -23,10 +18,10 @@ function Features({ offset }) {
     navigator.clipboard.writeText(npmCommand);
   }
 
-  const checkVouch = (address) => {
+  const checkVouch = async (address) => {
     if (address.length === 43) {
-      const isVouched = isVouched(address)
-      if (isVouched) {
+      const vouched = await isVouched(address)
+      if (vouched) {
         setVouched(true)
         setSearched(true)
       }
