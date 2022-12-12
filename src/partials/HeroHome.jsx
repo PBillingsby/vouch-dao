@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+// import fs from 'fs';
 import { ArrowDownCircle } from 'tabler-icons-react';
 import FeaturesHome from '../partials/Features';
 
 function HeroHome() {
   const [offset, setOffset] = useState(0);
+
   window.addEventListener("scroll",
     () => setOffset(window.pageYOffset)
   )
